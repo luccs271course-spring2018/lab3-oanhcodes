@@ -77,7 +77,7 @@ public class TestIterator {
         while (i.hasNext()) {
             if (i.next() == 77) {
                 i.remove(); // Done what happens if you use list.remove(77)?
-                //Answer: Every element equal to 77 is removed from the list
+                //Answer: Removes the first occurrence of the element in a list
             }
         }
         // Done using assertEquals and Arrays.asList, express which values are left in the list
@@ -99,7 +99,7 @@ public class TestIterator {
         list.add(66);
         double sum = 0;
         int n = 0;
-        // TODO use an iterator and a while loop to compute the average (mean) of the values
+        // Done use an iterator and a while loop to compute the average (mean) of the values
         // (defined as the sum of the items divided by the number of items)
         final Iterator<Integer> i = list.iterator();
         while (i.hasNext()) {
