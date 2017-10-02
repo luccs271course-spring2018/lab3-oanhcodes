@@ -48,7 +48,7 @@ Removes the first occurrence of an Integer equal to 5 in the list.
 
 #### Which of the two lists performs better as the size increases?
 
-ArrayList performs better when accessing elements because you can . LinkedLists perform better when adding or removing the first item of a list.
+ArrayList performs better when accessing elements. LinkedLists perform better when adding or removing the first item of a list.
 
 
 
