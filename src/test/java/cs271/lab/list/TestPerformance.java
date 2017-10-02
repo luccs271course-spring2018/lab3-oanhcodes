@@ -30,6 +30,12 @@ public class TestPerformance {
 
     private List<Integer> linkedList;
 
+    private long totalTime;
+
+    public void calculateRunTime(final long startTime, final long endTime) {
+        totalTime = endTime - startTime;
+    }
+
     @Before
     public void setUp() throws Exception {
         arrayList = new ArrayList<Integer>(SIZE);
@@ -54,7 +60,7 @@ public class TestPerformance {
             linkedList.remove(0);
         }
         final long endTime   = System.currentTimeMillis();
-        final long totalTime = endTime - startTime;
+        calculateRunTime(startTime, endTime);
         System.out.println("LinkedList AddRemove with size of " + SIZE + " took: " + totalTime);
     }
 
@@ -66,7 +72,7 @@ public class TestPerformance {
             arrayList.remove(0);
         }
         final long endTime = System.currentTimeMillis();
-        final long totalTime = endTime - startTime;
+        calculateRunTime(startTime, endTime);
         System.out.println("ArrayList AddRemove with size of " + SIZE + " took: " + totalTime);
     }
 
@@ -78,7 +84,7 @@ public class TestPerformance {
             sum += linkedList.get(r % SIZE);
         }
         final long endTime = System.currentTimeMillis();
-        final long totalTime = endTime - startTime;
+        calculateRunTime(startTime, endTime);
         System.out.println("LinkedList Access with size of " + SIZE + " took: " + totalTime);
     }
 
@@ -90,7 +96,7 @@ public class TestPerformance {
             sum += arrayList.get(r % SIZE);
         }
         final long endTime = System.currentTimeMillis();
-        final long totalTime = endTime - startTime;
+        calculateRunTime(startTime, endTime);
         System.out.println("ArrayList Access with size of " + SIZE + " took: " + totalTime);
     }
 }
