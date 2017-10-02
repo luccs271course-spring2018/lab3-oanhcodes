@@ -8,6 +8,14 @@
 No, all the tests ran with the same results because ArrayList and LinkedLists both fulfill the functional requirements of the List interface. This is true for all the methods in the TestList and TestIterator classes.
 
 
+####  What happens if you use list.remove(77)?
+
+```
+list.remove(77)
+```
+Removes the first occurrence equal to 77 in the list.
+
+
 #### What does the first remove method do in the testRemoveObject?
 
 ```
@@ -26,7 +34,7 @@ Removes the first occurrence of an Integer equal to 5 in the list.
 
 #### Run test and record running times for SIZE = 10, 100, 1000, 10000
 
-These results are based on milliseconds recorded by calculating the total run time using System.currentTimeMillis().  I also created graphs based off the data in the build report. A pdf of these results have been added to the repo.
+These results are based on milliseconds recorded by calculating the total run time using System.currentTimeMillis().  I also created graphs based off the data in the build report. A pdf of these results has been added to the repo.
 
     ArrayList Access with size of 10 took: 22
     LinkedList AddRemove with size of 10 took: 88
@@ -54,3 +62,5 @@ These results are based on milliseconds recorded by calculating the total run ti
 #### Which of the two lists performs better as the size increases?
 
 ArrayList performs better when accessing elements. LinkedLists perform better when adding or removing the first item of a list.
+
+[Google Sheet w/ Graph .pdf](https://github.com/luccs271course/lab3-oanhcodes/blob/master/Lab3-oanhcodes%20Performance%20Graphs%20-%20Sheet1.pdf)
